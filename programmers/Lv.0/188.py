@@ -1,16 +1,13 @@
-# [PCCE 기출문제] 4번 / 저축
+# 공배수
 
-start = int(input())
-before = int(input())
-after = int(input())
+# 1
+def solution(number, n, m):
+    return 1 if number % n == 0 and number % m == 0 else 0
 
-money = start
-month = 1
-while money < 70:
-    money += before
-    month += 1
-while money < 100:
-    money += after
-    month += 1
+# 2
+def solution(number, n, m):
+    return int(number % n == 0 and number % m == 0)
 
-print(month)
+# 3
+def solution(number, n, m):
+    return int(not(number % n) and not(number % m)) # not 두 조건에 모두 줘야 함!

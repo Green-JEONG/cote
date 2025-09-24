@@ -1,15 +1,7 @@
-# [PCCE 기출문제] 4번 / 병과분류
+# 문자열 겹쳐쓰기
 
-code = input()
-last_four_words = code[-4:]
+# 1. 세 부분으로 나누기: 앞부분, 덮어쓸 부분, 남은 부분
+def solution(my_string, overwrite_string, s):
+    return my_string[:s] + overwrite_string + my_string[s+len(overwrite_string):] # 덮어쓴 부분 뒤에 남은 부분 그대로 이어 붙임  
 
-if last_four_words == '_eye':
-    print("Ophthalmologyc")
-elif last_four_words == 'head':
-    print("Neurosurgery")
-elif last_four_words == 'infl':
-    print("Orthopedics")
-elif last_four_words == 'skin':
-    print("Dermatology")
-else:
-    print("direct recommendation")
+# range()는 정수 범위용, 문자열 들어오면 X
