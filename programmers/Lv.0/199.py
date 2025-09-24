@@ -1,22 +1,8 @@
-# 덧셈식 출력하기
+# 마지막 두 원소
 
-# 1. f-string (권장)
-a, b = map(int, input().split(' '))
-print(f'{a} + {b} = {a+b}')
-
-# 2. str.format()
-a, b = map(int, input().strip().split(' '))
-'''
-c = a + b
-print('{} + {} = {}'.format(a, b, c))
-'''
-
-print('{} + {} = {}'.format(a,b,a+b))
-
-# 3. 인자 전달
-a, b = map(int, input().strip().split(' '))
-print(a, '+', b,'=',a+b)
-
-# 4. 문자열 더하기
-a, b = map(int, input().strip().split(' '))
-print(str(a) + ' + ' + str(b) + ' = ' + str(a+b))
+def solution(num_list):
+    if num_list[-2] < num_list[-1]:
+        num_list.append(num_list[-1] - num_list[-2])
+    else: # 크지 않다면 = 같거나 작으면
+        num_list.append(num_list[-1] * 2)
+    return num_list

@@ -1,3 +1,11 @@
-# 특수문자 출력하기
+# 이어 붙인 수
 
-print(r'!@#$%^&*(\'"<>?:;') # 이스케이프 무시, r''''''는 여러줄 가능
+def solution(num_list):
+    odds = ''
+    evens = ''
+    for n in num_list:
+        if n % 2:
+            odds += str(n)
+        else:
+            evens += str(n)
+    return int(odds)+int(evens)
