@@ -1,6 +1,6 @@
 # 나머지 구하기
 
-# 1
+# 1 (권장)
 def solution(num1, num2):
     '''answer = num1 % num2
     return answer'''
@@ -10,11 +10,11 @@ def solution(num1, num2):
 def solution(num1, num2):
     return divmod(num1, num2)[1]
 
-# 3. 빼기로 접근
+# 3. 빼기로 접근 (비효율적)
 def solution(num1, num2):
     while num1 >= num2:
         num1 -= num2
     return num1
 
 # 4. 람다
-solution = lambda num1, num2 : num1 * num2
+solution = lambda num1, num2 : num1 % num2
