@@ -1,0 +1,13 @@
+-- 가장 비싼 상품 구하기
+
+-- 1. 내 풀이
+SELECT PRICE AS MAX_PRICE
+FROM PRODUCT
+WHRER PRICE = (
+    SELECT MAX(PRICE)
+    FROM PRODUCT
+);
+
+-- 2. 더 간단하게 (서브쿼리 없이)
+SELECT MAX(PRICE) AS MAX_PRICE
+FROM PRODUCT;

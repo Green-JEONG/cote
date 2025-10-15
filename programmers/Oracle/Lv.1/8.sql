@@ -1,0 +1,15 @@
+-- 상위 n개 레코드
+
+-- 1. SQL 문법
+SELECT NAME
+FROM ANIMAL_INS
+WHERE DATETIME = (
+    SELECT MIN(DATETIME)
+    FROM ANIMAL_INS
+);
+
+-- 2. Oracle
+SELECT NAME
+FROM ANIMAL_INS
+ORDER BY DATETIME -- 가장 오래된(먼저 들어온) 순
+FETCH FIRST 1 ROWS ONLY; -- 그중 맨 첫 번째 행만 가져오기
