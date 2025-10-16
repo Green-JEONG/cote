@@ -1,6 +1,6 @@
 -- 경기도에 위치한 식품창고 목록 출력하기
 
--- 1. 표준 SQL
+-- 1. 표준 SQL or PostgreSQL
 SELECT WAREHOUSE_ID,
     WAREHOUSE_NAME,
     ADDRESS,
