@@ -1,7 +1,7 @@
 -- 카테고리 별 상품 개수 구하기
 
 -- 1. MySQL or PostgreSQL
-SELECT SUBSTRING(PRODUCT_CODE, 1, 2) AS CATEGORY, # 특정 컬럼의 앞 두 글자 추출
+SELECT SUBSTRING(PRODUCT_CODE, 1, 2) AS CATEGORY, -- 특정 컬럼의 앞 두 글자 추출
     COUNT(*) AS PRODUCTS
 FROM PRODUCT
 GROUP BY CATEGORY
