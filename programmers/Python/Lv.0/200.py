@@ -1,8 +1,8 @@
 # 이어 붙인 수
 
 def solution(num_list):
-    odds = ''
-    evens = ''
+    odds = '' # total_odd
+    evens = '' # total_even
     for n in num_list:
         if n % 2:
             odds += str(n)
