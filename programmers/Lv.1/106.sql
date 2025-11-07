@@ -1,0 +1,15 @@
+-- Python 개발자 찾기
+
+-- 1. 내 풀이
+SELECT ID, EMAIL, FIRST_NAME, LAST_NAME
+FROM DEVELOPER_INFOS
+WHERE SKILL_1 = 'Python'
+    OR SKILL_2 = 'Python'
+    OR SKILL_3 = 'Python'
+ORDER BY ID;
+
+-- 2. 더 깔끔하게 수정 (MySQL의 'IN 튜플 비교' 문법 활용)
+SELECT ID, EMAIL, FIRST_NAME, LAST_NAME
+FROM DEVELOPER_INFOS
+WHERE 'Python' IN (SKILL_1, SKILL_2, SKILL_3)
+ORDER BY ID;
